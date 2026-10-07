@@ -1,0 +1,36 @@
+{
+  "name": "evorace",
+  "private": true,
+  "version": "1.0.0",
+  "description": "EvoRace — Laboratório de Pilotos: jogo 2D de treinamento de redes neurais por evolução, com ranking online validado pelo servidor.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "node --watch server/main.ts",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "server": "node server/main.ts",
+    "start": "npm run build && node server/main.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bench": "node scripts/bench.ts",
+    "verify:training": "node scripts/verify-training.ts"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.3",
+    "vitest": "^5.0.3"
+  }
+}
